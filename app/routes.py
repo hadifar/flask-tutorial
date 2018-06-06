@@ -23,6 +23,11 @@ def index():
     user = {'username': 'Amir'}
     posts = [
         {
+            'author': {'username': 'Amir'},
+            'body': 'Sexy day in Tehran :)'
+        }
+        ,
+        {
             'author': {'username': 'John'},
             'body': 'Beautiful day in Portland!'
         },
