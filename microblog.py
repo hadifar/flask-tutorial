@@ -14,4 +14,3 @@
 # limitations under the License.
 # ==============================================================================
 from app import app
-#this is simple feature

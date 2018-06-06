@@ -13,10 +13,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+from flask import render_template
 from app import app
 
 
 @app.route('/')
 @app.route('/index')
 def index():
-    return "Hello, World!"
+    user = {'username': 'Amir'}
+    posts = [
+        {
+            'author': {'username': 'John'},
+            'body': 'Beautiful day in Portland!'
+        },
+        {
+            'author': {'username': 'Susan'},
+            'body': 'The Avengers movie was so cool!'
+        }
+    ]
+    return render_template('index.html', title='Home', user=user, posts=posts)
