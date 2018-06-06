@@ -14,10 +14,8 @@
 # limitations under the License.
 # ==============================================================================
 
-from flask import Flask
-from config import Config
+import os
 
-app = Flask(__name__)
-app.config.from_object(Config)
 
-from app import routes
+class Config(object):
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
